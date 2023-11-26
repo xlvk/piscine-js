@@ -1,4 +1,4 @@
-var str; 
-var num; 
-var bool;
-var undef;
+const str = 'abc'
+const num = 10
+const bool = true
+const undef = undefined
