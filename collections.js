@@ -1,18 +1,4 @@
-// const str1 = 'hello'
-// const arr1 = [ 1, 2, 1, 3 ]
-// const obj1 = { x: 45, y: 75, radius: 24 }
-// const set1 = new Set()
-// const map1 = new Map()
-// set1.add(1)
-// set1.add(2)
-// set1.add(1)
-// set1.add(3)
-// map1.set('a', 1)
-// map1.set('b', 2)
-// map1.set(3, 'c')
-// map1.set(4, 'd')
-
-const arrToSet = (arr) => {
+)const arrToSet = (arr) => {
     let set = new Set
     for(let i = 0;i<arr.length;i++){
         set.add(arr[i])
@@ -98,25 +84,3 @@ const superTypeOf = (e) => {
 
   return typeof e
 }
-// console.log(arrToSet(arr1)) // -> Set { 1, 2, 3 }
-// console.log(arrToStr(arr1)) // -> '1213'
-// console.log(setToArr(set1)) // -> [1, 2, 3]
-// console.log(setToStr(set1)) // -> '123'
-// console.log(strToArr(str1)) // -> ['h', 'e', 'l', 'l', 'o']
-// console.log(strToSet(str1)) // -> Set { 'h', 'e', 'l', 'o' }
-// console.log(mapToObj(map1)) // -> { a: 1, b: 2, '3': 'c', '4': 'd' }
-// console.log(objToArr(obj1)) // -> [45, 75, 24]
-// console.log(objToMap(obj1)) // -> Map { 'x' => 45, 'y' => 75, 'radius' => 24 }
-// console.log(arrToObj(arr1)) // -> { '0': 1, '1': 2, '2': 1, '3': 3 }
-// console.log(strToObj(str1)) // -> { '0': 'h', '1': 'e', '2': 'l', '3': 'l', '4': 'o' }
-
-// console.log(superTypeOf(map1)) //         -> 'Map'
-// console.log(superTypeOf(set1)) //         -> 'Set'
-// console.log(superTypeOf(obj1)) //         -> 'Object'
-// console.log(superTypeOf(str1)) //         -> 'String('
-// console.log(superTypeOf(666)) //         -> 'Number'
-// console.log(superTypeOf(NaN)) //         -> 'Number'
-// console.log(superTypeOf(arr1)) //         -> 'Array'
-// console.log(superTypeOf(null)) //        -> 'null'
-// console.log(superTypeOf(undefined)) //   -> 'undefined'
-// console.log(superTypeOf(superTypeOf)) // -> 'Function'
