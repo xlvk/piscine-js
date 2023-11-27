@@ -1,4 +1,4 @@
-)const arrToSet = (arr) => {
+const arrToSet = (arr) => {
     let set = new Set
     for(let i = 0;i<arr.length;i++){
         set.add(arr[i])
