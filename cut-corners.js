@@ -31,7 +31,7 @@ function ceil(n) {
 function floor(n) {
     let ost
     let res
-    ost = n % 1
+    ost = n 
     if (n > 0 && ost != 0) {
         return res = n - ost                                   
     } else if (ost === 0) {                           
@@ -46,7 +46,7 @@ function floor(n) {
 function trunc(n) {
     let ost
     let res
-    ost = n % 1
+    ost = n 
     if (n > 0 && ost != 0) {
         return res = n - ost
     } else {
