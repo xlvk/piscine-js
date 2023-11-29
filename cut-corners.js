@@ -37,7 +37,7 @@ function ceil(n) {
     } else if (ost === 0) {                           
         return n
     } else {
-        res = n - ost +1
+        res = n - ost 
         return res = -res
     }
     return n
