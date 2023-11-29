@@ -76,6 +76,8 @@ function trunc(n) {
     }
     if (!flag && ost != 0) {
         return res = n - ost
+    } else if (ost === 0) {                           
+        return n
     } else {
         res = n - ost
         return res = -res
