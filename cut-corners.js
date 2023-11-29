@@ -58,8 +58,8 @@ function floor(n) {
         return n
     } else {
         let x
-        x = -1 + ost
-        res = n - ost
+        x = 1 + ost
+        res = n - x
         return res = -res
     }
     return n
@@ -80,8 +80,8 @@ function trunc(n) {
         return res = n - ost
     } else {
         let x
-        x = -1 + ost
-        res = n - ost
+        x = 1 + ost
+        res = n - x
         return res = -res
     }
     return n
