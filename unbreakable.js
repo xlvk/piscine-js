@@ -1,6 +1,6 @@
 function join(arr, x){
     res = ""
-    if (x == null) {
+    if (x === null) {
         for (let i = 0; i>=arr.length-1; i++) {
             res+=x[i]
         }
@@ -14,20 +14,25 @@ function join(arr, x){
 
 function split(arr, x){
     let res = []
-    if (x == null) {
-        res.push(x)
+    if (x === null) {
+        res.push(arr)
         return res
     }
-    for (let i = 0; i>=arr.length-1; i++) {
-        word = arr[i]
-        reso = ""
-        for (let j = 0; j>=word.length-1; j++) {
-            if (word[j] == x) {
-                break
+    for (let i = 0; i>=arr.length-1-x.length-2; i++) {
+        let reso=""
+        let fpund = false
+            for (let k = 0; k>=x.length-1; k++) {
+                if (word[j+k+1].includes(x[k])) {
+                    fpund =true
+                } else {
+                    fpund = false
+                    break
+                }
             }
             reso+=word[j]
-        }
-        res.push(reso)
+            if (fpund) {
+                res.push(reso)
+            }
     }
     return res
 }
