@@ -32,7 +32,7 @@ function ceil(n) {
     while (ost >= 1) {
         ost-=1
     }
-    if (n > 0 && ost != 0) {
+    if (!flag && ost != 0) {
         return res = n + 1 - ost
     } else {
         res = n - ost
@@ -52,7 +52,7 @@ function floor(n) {
     while (ost >= 1) {
         ost-=1
     }
-    if (n > 0 && ost != 0) {
+    if (!flag && ost != 0) {
         return res = n - ost                                   
     } else if (ost === 0) {                           
         return n
@@ -76,7 +76,7 @@ function trunc(n) {
     while (ost >= 1) {
         ost-=1
     }
-    if (n > 0 && ost != 0) {
+    if (!flag && ost != 0) {
         return res = n - ost
     } else {
         let x
