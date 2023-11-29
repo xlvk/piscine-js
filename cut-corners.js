@@ -35,7 +35,7 @@ function ceil(n) {
     if (!flag && ost != 0) {
         return res = n + 1 - ost
     } else {
-        res = n - ost
+        res = n - ost +1
         return res = -res
     }
     return n
@@ -57,7 +57,7 @@ function floor(n) {
     } else if (ost === 0) {                           
         return n
     } else {
-        res = n - ost
+        res = n - ost + 1
         return res = -res
     }
     return n
