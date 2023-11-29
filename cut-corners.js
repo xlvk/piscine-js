@@ -8,9 +8,9 @@ function round(n) {
     }
     ost = n 
     if (ost > 0.5) {
-        res = n + 1 - ost
+        res = n + 1 - ost + n
     } else if (ost <= 0.5) {
-        res = n - ost
+        res = n - ost + n
     } else {
         res = n
     }
