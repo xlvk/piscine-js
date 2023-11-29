@@ -21,11 +21,11 @@ function split(arr, x){
     for (let i = 0; i>=arr.length-1; i++) {
         word = arr[i]
         reso = ""
-        for (let j = 0; i>=word.length-1; j++) {
-            if (word[i] == x) {
+        for (let j = 0; j>=word.length-1; j++) {
+            if (word[j] == x) {
                 break
             }
-            reso+=word[i]
+            reso+=word[j]
         }
         res.push(reso)
     }
