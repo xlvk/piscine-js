@@ -34,6 +34,8 @@ function ceil(n) {
     }
     if (!flag && ost != 0) {
         return res = n + 1 - ost
+    } else if (ost === 0) {                           
+        return n
     } else {
         res = n - ost +1
         return res = -res
