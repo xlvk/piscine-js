@@ -22,22 +22,33 @@ function round(n) {
 }
 function ceil(n) {
     let ost
-    let res
-    ost = n 
+    let res 
+    let flag = false
+    if (n < 0) {
+        n = -n
+        flag = true
+    }
+    ost = n
     while (ost >= 1) {
         ost-=1
     }
     if (n > 0 && ost != 0) {
         return res = n + 1 - ost
     } else {
-        return res = n - ost
+        res = n - ost
+        return res = -res
     }
     return n
 }
 function floor(n) {
     let ost
     let res
-    ost = n 
+    let flag = false
+    if (n < 0) {
+        n = -n
+        flag = true
+    }
+    ost = n
     while (ost >= 1) {
         ost-=1
     }
@@ -48,14 +59,20 @@ function floor(n) {
     } else {
         let x
         x = 1 + ost
-        return res = n + x
+        res = n - ost
+        return res = -res
     }
     return n
 }
 function trunc(n) {
     let ost
     let res
-    ost = n 
+    let flag = false
+    if (n < 0) {
+        n = -n
+        flag = true
+    }
+    ost = n
     while (ost >= 1) {
         ost-=1
     }
@@ -64,7 +81,8 @@ function trunc(n) {
     } else {
         let x
         x = 1 + ost
-        return res = n - ost
+        res = n - ost
+        return res = -res
     }
     return n
 }
