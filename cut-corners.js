@@ -20,7 +20,7 @@ function round(n) {
 function ceil(n) {
     let ost
     let res
-    ost = n % 1
+    ost = n 
     if (n > 0 && ost != 0) {
         return res = n + 1 - ost
     } else {
