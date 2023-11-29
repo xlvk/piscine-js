@@ -7,10 +7,10 @@ function round(n) {
         flag = true
     }
     ost = n 
-    if (ost > 0) {
-        res = n + 1 - ost
+    if (ost > 0.5) {
+        res = n + 1
     } else {
-        res = n - ost
+        res = n
     }
     if (flag) {
         res = -res
