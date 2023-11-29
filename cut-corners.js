@@ -68,21 +68,29 @@ function trunc(n) {
     let ost
     let res
     let flag = false
+    let fflag = false
     if (n < 0) {
         n = -n
         flag = true
+    }
+    if (n > 0xfffffffff) {
+        n-= 0xfffffffff
+        fflag = true
     }
     ost = n
     while (ost >= 1) {
         ost-=1
     }
-    if (!flag && ost != 0) {
+    if (!fflag && !flag && ost != 0) {
         return res = n - ost
     } else if (ost === 0) {                           
         return n
-    } else {
+    } else if (flag) {
         res = n - ost
         return res = -res
+    } else {
+        res = n - ost
+        return res = res + 0xfffffffff
     }
     return n
 }
