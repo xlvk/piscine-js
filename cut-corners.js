@@ -48,7 +48,7 @@ function floor(n) {
     } else {
         let x
         x = 1 + ost
-        return res = n - x
+        return res = n + x
     }
     return n
 }
