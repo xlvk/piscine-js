@@ -8,7 +8,7 @@ function round(n) {
     }
     ost = n 
     while (ost >= 1) {
-        ost-=ost
+        ost-=1
     }
     if (ost > 0.5) {
         res = n + 1 - ost 
@@ -25,7 +25,7 @@ function ceil(n) {
     let res
     ost = n 
     while (ost >= 1) {
-        ost-=ost
+        ost-=1
     }
     if (n > 0 && ost != 0) {
         return res = n + 1 - ost
@@ -39,7 +39,7 @@ function floor(n) {
     let res
     ost = n 
     while (ost >= 1) {
-        ost-=ost
+        ost-=1
     }
     if (n > 0 && ost != 0) {
         return res = n - ost                                   
@@ -56,6 +56,9 @@ function trunc(n) {
     let ost
     let res
     ost = n 
+    while (ost >= 1) {
+        ost-=1
+    }
     if (n > 0 && ost != 0) {
         return res = n - ost
     } else {
