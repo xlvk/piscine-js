@@ -19,6 +19,10 @@ function split(arr, x){
             i = 0
         }
     }
-    res.push(arr)
+    if (arr == x) {
+        res.push("")
+    } else {
+        res.push(arr)
+    }
     return res
 }
