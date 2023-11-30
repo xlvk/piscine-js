@@ -12,13 +12,13 @@ function join(arr, x){
 
 function split(arr, x){
     let res = []
-    let end = 0
     for (let i = 0; i<arr.length-x.length+1; i++) {
         if (arr.substring(i,i+x.length) == x) {
-            res.push(arr.substring(end, i))
-            end = i + x.length
+            res.push(arr.substring(0, i))
+            arr = arr.slice(i + x.length)
+            i = 0
         }
     }
-    res.push(arr.substring(end))
+    res.push(x)
     return res
 }
