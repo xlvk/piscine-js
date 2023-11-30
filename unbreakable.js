@@ -13,8 +13,8 @@ function join(arr, x){
 function split(arr, x){
     let res = []
     for (let i = 0; i>=arr.length-x.length+1; i++) {
-        if (arr.slice(i,i+x.length) == x) {
-            res.push(arr.slice(0, i))
+        if (arr.substring(i,i+x.length) == x) {
+            res.push(arr.substring(0, i))
             arr = arr.slice(i + x.length)
             i = 0
         }
