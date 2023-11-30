@@ -15,10 +15,10 @@ function split(arr, x){
     for (let i = 0; i<arr.length-x.length+1; i++) {
         if (arr.substring(i,i+x.length) == x) {
             res.push(arr.substring(0, i))
-            arr = arr.slice(i + x.length+1)
+            arr = arr.slice(i + x.length)
             i = 0
         }
     }
-    res.push(x)
+    res.push(arr)
     return res
 }
