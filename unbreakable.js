@@ -19,6 +19,6 @@ function split(arr, x){
             end = i + x.length
         }
     }
-    res.push(arr.substring(end, x.length-1))
+    res.push(arr.substring(end))
     return res
 }
