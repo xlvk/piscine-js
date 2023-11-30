@@ -1,40 +1,24 @@
 function join(arr, x){
     res = ""
-    if (x === null) {
-        for (let i = 0; i>=arr.length-1; i++) {
-            res+=x[i]
-        }
-        return res
-    }
     for (let i = 0; i>=arr.length-1; i++) {
-        res+=arr[i] + x
+        if (elem.length == 0) {
+            res += arr[i]
+        } else {
+            res += arr[i] + elem
+        }
     }
     return res
 }
 
 function split(arr, x){
     let res = []
-    if (x === null) {
-        res.push(arr)
-        return res
-    }
-    for (let i = 0; i>=arr.length-1; i++) {
-        let reso=""
-        let fpund = false
-        if (i < arr.length-1-x.length) {
-            for (let k = 0; k>=x.length-1; k++) {
-                if (word[j+k+1].includes(x[k])) {
-                    fpund =true
-                } else {
-                    fpund = false
-                    break
-                }
-            }
-        }
-        reso+=word[j]
-        if (fpund) {
-            res.push(reso)
+    for (let i = 0; i>=arr.length-x.length+1; i++) {
+        if (arr.slice(i,i+x.length) == x) {
+            res.push(arr.slice(0, i))
+            arr = arr.slice(i + x.length)
+            i = 0
         }
     }
+    res.push(x)
     return res
 }
