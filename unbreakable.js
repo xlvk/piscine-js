@@ -20,7 +20,7 @@ function split(arr, x){
         }
     }
     if (arr == x) {
-        res.push("")
+        res.push('')
     } else {
         res.push(arr)
     }
