@@ -2,7 +2,7 @@ function getURL(dataSet) {
   var ha = /(http[s]?\:\/\/)[^\s][^\s]*(?=([\s]))/g;
   return dataSet.match(ha);
 }
-function ghaedyQuery(dataSet) {
+function greedyQuery(dataSet) {
   let arr = getURL(dataSet);
   let arr2 = [];
   var ha = /([^=]*[=]){3,}/g;
@@ -13,7 +13,7 @@ function ghaedyQuery(dataSet) {
   }
   return arr2;
 }
-function notSoGhaedy(dataSet) {
+function notSoGreedy(dataSet) {
   let arr = getURL(dataSet);
   let arr2 = [];
   var ha = /[=]/g;
