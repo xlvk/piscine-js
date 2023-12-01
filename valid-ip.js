@@ -1,14 +1,15 @@
-function findIP(data) {
-  let c = [
-    "233.123.12.234",
-    "192.168.1.123:8080",
-    "192.169.1.23",
-    "10.1.23.7",
-    "0.0.0.0:22",
-    "0.0.0.0:68768",
-    "255.253.123.2:8000",
-    "192.168.1.123",
-    "0.0.0.0",
-  ];
-  return c;
+function findIP(str) {
+    const ha = /((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}((:)[1-9]\d*\d\d?)*/g;
+    let ha1 = str.match(ha)
+    let res = [];
+    for (let i = 0; i < ha1.length; i++) {
+        let num = ha1[i].split(":")
+        if (num[1]) {
+            if (num[1] > 65535) {
+                continue
+            }
+        }
+        res.push(ha1[i])
+    }
+    return res
 }
