@@ -59,5 +59,5 @@ function format(date, haha) {
     haha = haha.replace(/EEEE/g, lD[d.getDay()]);
     haha = haha.replace(/E/g, sD[d.getDay()].slice(0, 3));
 
-    return f;
+    return haha;
 }
