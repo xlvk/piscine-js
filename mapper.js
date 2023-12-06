@@ -1,4 +1,4 @@
-unction map(n,func) {
+function map(n,func) {
     let arr = []
     for (let i = 0 ; i < n.length ; i++) {
         arr.push(func(n[i],i,n))
