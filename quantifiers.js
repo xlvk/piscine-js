@@ -16,11 +16,11 @@ const some = (array, func) => {
   return false;
 };
 
-const some = (array, func) => {
+const none = (array, func) => {
   for (let i = 0; i < array.length; i++) {
     if (func(array[i])) {
-      return true;
+      return false;
     }
   }
-  return false;
+  return true;
 };
