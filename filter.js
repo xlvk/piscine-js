@@ -10,7 +10,7 @@ function filter(arr, func) {
 function reject(collection, predicate) {
   const result = [];
   for (let i = 0; i < collection.length; i++) {
-    if (!predicate(collection[i])) {
+    if (!predicate(collection[i],i,collection)) {
       result.push(collection[i]);
     }
   }
@@ -19,7 +19,7 @@ function reject(collection, predicate) {
 function partition(collection, predicate) {
   const [pass, fail] = [[], []];
   for (let i = 0; i < collection.length; i++) {
-    if (predicate(collection[i])) {
+    if (predicate(collection[i],i,collection)) {
       pass.push(collection[i]);
     } else {
       fail.push(collection[i]);
