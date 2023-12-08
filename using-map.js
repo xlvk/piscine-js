@@ -6,6 +6,7 @@ function capitalizeFirstLetterOfEachWord(str) {
   }
   return words.join(" ");
 }
+
 const upperCasingStates = (cities) => cities.map((city) => capitalizeFirstLetterOfEachWord(city));
 function convertFahrenheitToCelsius(fahrenheitStr) {
   let numericPart = fahrenheitStr.slice(0, -2);
@@ -16,6 +17,7 @@ function convertFahrenheitToCelsius(fahrenheitStr) {
   let celsius = (fahrenheit - 32) * (5 / 9);
   return Math.floor(celsius.toFixed(2)) + "°C";
 }
+
 const fahrenheitToCelsius = (degrees) => {
   if (Array.isArray(degrees)) {
     return degrees.map((degree) => convertFahrenheitToCelsius(degree));
@@ -23,10 +25,12 @@ const fahrenheitToCelsius = (degrees) => {
     return convertFahrenheitToCelsius(degrees);
   }
 };
+
 const trimTemp = (temps) => temps.map((obj) => {
   const trimmedTemperature = obj.temperature.replace(/\s/g, "");
   return { ...obj, temperature: trimmedTemperature };
 });
+
 const tempForecasts = (cities) => {
   return cities.map((obj) => {
     const celsiusTemperature = fahrenheitToCelsius(obj.temperature.replace(/\s/g, "")).slice(0,-1);
