@@ -7,6 +7,7 @@ function filter(arr, func) {
   }
   return arr1;
 }
+
 function reject(collection, predicate) {
   const result = [];
   for (let i = 0; i < collection.length; i++) {
@@ -16,6 +17,7 @@ function reject(collection, predicate) {
   }
   return result;
 }
+
 function partition(collection, predicate) {
   const [pass, fail] = [[], []];
   for (let i = 0; i < collection.length; i++) {
