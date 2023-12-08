@@ -4,12 +4,14 @@ const fold = (array, func, accumulator) => {
   }
   return accumulator;
 };
+
 const foldRight = (array, func, accumulator) => {
   for (let i = array.length - 1; i >= 0; i--) {
     accumulator = func(accumulator, array[i]);
   }
   return accumulator;
 };
+
 const reduce = (array, func) => {
   if (array.length < 1) {
 return 
@@ -20,6 +22,7 @@ return
   }
   return accumulator;
 };
+
 const reduceRight = (array, func) => {
   if (array.length < 1) {
 return  }
