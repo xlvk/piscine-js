@@ -7,12 +7,14 @@ const filter5Vowels = (arr) => {
     return vowelCount >= 5;
   });
 };
+
 const filter1DistinctVowel = (arr) => {
   return arr.filter((str) => {
     const vowels = new Set(str.toLowerCase().match(/[aeiou]/g));
     return vowels.size === 1;
   });
 };
+
 const multiFilter = (arr) => {
   return arr.filter((obj) => {
     const capital = obj.capital || '';
