@@ -5,6 +5,7 @@ function map(n,func) {
     }
     return arr
 }
+
 function flatMap(n, func) {
   let arr = [];
   for (let i = 0; i < n.length; i++) {
