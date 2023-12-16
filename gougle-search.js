@@ -3,10 +3,8 @@ async function queryServers(serverName, q) {
     let url2 = '/' + serverName + "_backup?q=" + q
     let a = getJSON(url1)
     let b = getJSON(url2)
-
     return await Promise.race([a, b])
 }
-
 
 async function gougleSearch(q) {
     var timeout = new Promise((resolve) =>
